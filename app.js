@@ -22,7 +22,7 @@ app.get('/',(req, res) => {
 // Agrega el código HTTP CODE 200 en el request:
 
 //ESTO ES UN ENDPOITN
-// HTTP METHODS
+// HTTP METHODS: GET, POST, PULL, DELETE
 app.get('/v1/explorers',(req, res) => {
     console.log(`Api Explorers GET ALL requests ${new Date()}`)
     const explorers1 = { id:1, name: "Magdiel1"}
@@ -32,4 +32,12 @@ app.get('/v1/explorers',(req, res) => {
     const explorers = [explorers1, explorers2, explorers3, explorers4]
     // HTPP CODE STATUS: 200 (OK)
     res.status(200).json(explorers)
+})
+
+app.get('/v1/explorers/:id',(req, res) => {
+    console.log(`Api BY ID  Explorers V1 API ${new Date()}`)
+    const explorers1 = { id:1, name: "Magdiel1"}
+    
+    // HTPP CODE STATUS: 200 (OK)
+    res.status(200).json(explorers1)
 })
