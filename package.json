@@ -1,0 +1,19 @@
+{
+  "name": "express_api",
+  "version": "1.0.0",
+  "description": "Mi primer API en Exprees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagdielAndres/express_api.git"
+  },
+  "author": "Magdiel Andres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagdielAndres/express_api/issues"
+  },
+  "homepage": "https://github.com/MagdielAndres/express_api#readme"
+}
