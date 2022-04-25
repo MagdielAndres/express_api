@@ -23,6 +23,7 @@ app.get('/',(req, res) => {
 
 //ESTO ES UN ENDPOITN
 // HTTP METHODS: GET, POST, PULL, DELETE
+// Método GET es para regresar información
 app.get('/v1/explorers',(req, res) => {
     console.log(`Api Explorers GET ALL requests ${new Date()}`)
     const explorers1 = { id:1, name: "Magdiel1"}
@@ -40,4 +41,13 @@ app.get('/v1/explorers/:id',(req, res) => {
     
     // HTPP CODE STATUS: 200 (OK)
     res.status(200).json(explorers1)
+})
+
+// Método POST es para crea 
+//Método POST
+app.post('/v1/explorers', (req, res) => {
+    console.log(`POST Explorers V1 API ${new Date()}`)
+    // Agregando la lógica para persistir
+    console.log(req.body) // parámetros del requerst
+    res.status(201).json({ message: "Creado exitosamente" })
 })
