@@ -1,5 +1,6 @@
 // Usando objeot express
 const express = require('express')
+const req = require('express/lib/request')
 
 // App de express
 const app = express()
@@ -44,10 +45,28 @@ app.get('/v1/explorers/:id',(req, res) => {
 })
 
 // Método POST es para crea 
-//Método POST
+//Método HTTP: POST
 app.post('/v1/explorers', (req, res) => {
     console.log(`POST Explorers V1 API ${new Date()}`)
     // Agregando la lógica para persistir
     console.log(req.body) // parámetros del requerst
     res.status(201).json({ message: "Creado exitosamente" })
+})
+
+// Método HTPP: PUT Crea un endpoint que se encargue de actualizar un explorer
+app.put('/v1/explorers/:id', (req, res) => {
+    console.log(`PUT Explorers V1 API ${new Date()}`)
+    console.log(req.body)// parámetros para actualizar
+    console.log(`Update explorers with id ${req.params.id}`) //query params
+    // Agregando la lógica para actualizar
+    res.status(200).json({ message: "Actulización exitosamente" })
+})
+
+
+// Método HTPP: DELETE Crea un endpoint para eliminar un explorer
+app.delete('/v1/explorers/:id', (req, res) => {
+    console.log(`DELETE Explorers V1 API ${new Date()}`)
+    
+    // Agregando la lógica para eliminar
+    res.status(200).json({ message: "Se eliminó exitosamente" })
 })
