@@ -21,6 +21,7 @@ app.get('/',(req, res) => {
 // Crea algunos objetos y regresa la lista como se indica.
 // Agrega el código HTTP CODE 200 en el request:
 
+//ESTO ES UN ENDPOITN
 // HTTP METHODS
 app.get('/v1/explorers',(req, res) => {
     console.log(`Api Explorers GET ALL requests ${new Date()}`)
@@ -29,5 +30,6 @@ app.get('/v1/explorers',(req, res) => {
     const explorers3 = { id:3, name: "Magdiel3"}
     const explorers4 = { id:4, name: "Magdiel4"}
     const explorers = [explorers1, explorers2, explorers3, explorers4]
+    // HTPP CODE STATUS: 200 (OK)
     res.status(200).json(explorers)
 })
